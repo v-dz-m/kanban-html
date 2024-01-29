@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fd951fcc">
+    <title>KANBAN TEST</title>
+
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="boards">
+        <div class="board">
+            <h2>СОЗДАНА</h2>
+            <div class="dropZone" id="created">
+                <div class="card" draggable="true">
+                    <div class="status created"></div>
+                    <div class="content">Создана.</div>
+                </div>
+            </div>
+        </div>
+        <div class="board">
+            <h2>НАЗНАЧЕНА</h2>
+            <div class="dropZone" id="todo">
+                <div class="card" draggable="true">
+                    <div class="status todo"></div>
+                    <div class="content">Назначена.</div>
+                </div>
+            </div>
+        </div>
+        <div class="board">
+            <h2>В РАБОТЕ</h2>
+            <div class="dropZone" id="doing">
+                <div class="card" draggable="true">
+                    <div class="status doing"></div>
+                    <div class="content">Выполняется.</div>
+                </div>
+            </div>
+        </div>
+        <div class="board">
+            <h2>НА ПРОВЕРКЕ</h2>
+            <div class="dropZone" id="testing">
+                <div class="card" draggable="true">
+                    <div class="status testing"></div>
+                    <div class="content">Проверяется.</div>
+                </div>
+            </div>
+        </div>
+        <div class="board">
+            <h2>ГОТОВО!</h2>
+            <div class="dropZone" id="done">
+                <div class="card" draggable="true">
+                    <div class="status done"></div>
+                    <div class="content">Выполнена.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="task">
+            <h2><label for="task">ДОБАВИТЬ ЗАДАЧУ</label></h2>
+            <form id="addTask" action="https://lucasbecker.github.io/nabnak/POST">
+                <input id="task" name="task" type="text" autocomplete="off">
+                <button type="submit"><img src="assets/plus.svg" alt="Add task"></button>
+            </form>
+        </div>
+        <div class="garbage archive">
+            <div class="dropZone" id="garbage">
+                <h2>Архивировать <a href="#">[99+]</a></h2>
+            </div>
+        </div>
+        <div class="garbage">
+            <div class="dropZone" id="garbage">
+                <h2>Удалить</h2>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/script.js" defer=""></script>
+</body>
+
+</html>
